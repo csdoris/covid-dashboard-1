@@ -40,7 +40,7 @@ const charts = [
 class Dashboard extends Component {
   render() {
     return (
-      <Grid centered columns={3} padded>
+      <Grid centered columns={3} padded stackable>
         <Grid.Row>
           <Grid.Column width={3}>
             <Grid centered columns={1}>

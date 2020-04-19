@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { List, Label } from "semantic-ui-react";
+import NumberFormat from 'react-number-format';
 
 class RankList extends Component {
   render() {
@@ -51,7 +52,7 @@ class RankList extends Component {
         { data.map((item, i) => (
           <List.Item key={i}>
             <List.Content as='a'>
-              <Label color='orange' horizontal>{item.confirmed}</Label> {item.country}
+              <Label color='orange' horizontal><NumberFormat value={item.confirmed} displayType={'text'} thousandSeparator={true} /></Label> {item.country}
             </List.Content>
           </List.Item>
         ))}
